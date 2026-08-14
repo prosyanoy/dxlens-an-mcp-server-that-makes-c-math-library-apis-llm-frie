@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "dxlens": {
+      "command": "python",
+      "args": ["-m", "dxlens.server"],
+      "cwd": "/ABSOLUTE/PATH/TO/dxlens"
+    }
+  }
+}

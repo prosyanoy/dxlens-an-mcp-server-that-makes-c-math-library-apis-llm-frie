@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "dxlens": {
+      "command": "/ABSOLUTE/PATH/TO/dxlens/.venv/bin/python",
+      "args": ["-m", "dxlens.server"],
+      "cwd": "/ABSOLUTE/PATH/TO/dxlens",
+      "env": {"DXLENS_HEADER": "/ABSOLUTE/PATH/TO/dxlens/headers/minifftdx.hpp"}
+    }
+  }
+}

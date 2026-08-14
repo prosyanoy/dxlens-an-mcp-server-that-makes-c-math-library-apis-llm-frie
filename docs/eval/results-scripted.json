@@ -1,0 +1,7279 @@
+{
+ "model": "scripted (deterministic, context-grounded)",
+ "summary": [
+  {
+   "context": "raw",
+   "budget": null,
+   "tokens": 4595,
+   "tasks": 30,
+   "compile_pass": 30,
+   "pass_at_1": 30,
+   "pass_with_loop": 30
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "tokens": 2994,
+   "tasks": 30,
+   "compile_pass": 4,
+   "pass_at_1": 4,
+   "pass_with_loop": 27
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "tokens": 1499,
+   "tasks": 30,
+   "compile_pass": 1,
+   "pass_at_1": 1,
+   "pass_with_loop": 20
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "tokens": 745,
+   "tasks": 30,
+   "compile_pass": 1,
+   "pass_at_1": 1,
+   "pass_with_loop": 20
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "tokens": 1698,
+   "tasks": 30,
+   "compile_pass": 30,
+   "pass_at_1": 30,
+   "pass_with_loop": 30
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "tokens": 1698,
+   "tasks": 30,
+   "compile_pass": 30,
+   "pass_at_1": 30,
+   "pass_with_loop": 30
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "tokens": 1491,
+   "tasks": 30,
+   "compile_pass": 27,
+   "pass_at_1": 27,
+   "pass_with_loop": 27
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "tokens": 744,
+   "tasks": 30,
+   "compile_pass": 1,
+   "pass_at_1": 1,
+   "pass_with_loop": 24
+  }
+ ],
+ "rows": [
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 4595,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 4595,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 2994,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 2994,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1499,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "wrong_output"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "wrong_output"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "wrong_output"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "wrong_output"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1499,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 745,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "wrong_output"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "wrong_output"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "wrong_output"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "wrong_output"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "raw",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 745,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": null,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": false,
+   "context_tokens": 1698,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 3000,
+   "feedback": true,
+   "context_tokens": 1698,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": false,
+   "context_tokens": 1491,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 1500,
+   "feedback": true,
+   "context_tokens": 1491,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 1,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": false,
+   "context_tokens": 744,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "peak-8-1-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "peak-64-5-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "peak-256-17-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "peak-1024-100-float",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "peak-128-9-double",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "peak-256-3-float-ept4",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "peak-512-7-double-sm860",
+   "kind": "peak",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "roundtrip-16-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "roundtrip-32-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "roundtrip-64-float",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "roundtrip-256-double",
+   "kind": "roundtrip",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "impulse-32-float",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "impulse-512-double",
+   "kind": "impulse",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "r2c-16-3-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "r2c-64-10-float",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "r2c-256-25-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "r2c-32-1-double",
+   "kind": "r2c",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "c2r-16-2-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "c2r-64-3-double",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "c2r-32-1-float",
+   "kind": "c2r",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "batch-16-3-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "batch-64-4-float",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "batch-32-5-double",
+   "kind": "batch",
+   "passed": true,
+   "attempts": 2,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": null
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "info-256-float-ept8-fpb1",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "info-512-double-ept4-fpb2",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "info-64-float-ept2-fpb4",
+   "kind": "info",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "supported-100-float-sm800-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "supported-64-double-sm750-fpb1",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "supported-2048-float-sm800-fpb64",
+   "kind": "supported",
+   "passed": false,
+   "attempts": 3,
+   "first_try": {
+    "compiled": false,
+    "passed": false
+   },
+   "failure": "compile"
+  },
+  {
+   "context": "spec",
+   "budget": 750,
+   "feedback": true,
+   "context_tokens": 744,
+   "task": "supported-4096-float-sm860-fpb1",
+   "kind": "supported",
+   "passed": true,
+   "attempts": 1,
+   "first_try": {
+    "compiled": true,
+    "passed": true
+   },
+   "failure": null
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+#include <cstdio>
+#include <cmath>
+#include <${HEADER}>
+using namespace ${NS};
+
+int main() {
+  using Fwd = ${ENTRY}<decltype(${DESC_R2C})>;
+  using Inv = ${ENTRY}<decltype(${DESC_C2R})>;
+  using real_t = typename Fwd::real_type;
+  constexpr unsigned N = Fwd::size;
+  real_t in[N], back[N];
+  typename Fwd::value_type spectrum[Fwd::output_length];
+  for (unsigned n = 0; n < N; ++n)
+    in[n] = static_cast<real_t>(std::cos(2.0 * 3.14159265358979323846 * ${FREQUENCY} * n / N));
+  Fwd().execute(in, spectrum);
+  Inv().execute(spectrum, back);  // c2r is unnormalized
+  std::printf("x1=%.3f\n", static_cast<double>(back[1]) / N);
+  return 0;
+}

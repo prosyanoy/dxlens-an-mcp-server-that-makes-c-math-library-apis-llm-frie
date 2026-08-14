@@ -1,0 +1,15 @@
+#include <cstdio>
+#include <${HEADER}>
+using namespace ${NS};
+
+int main() {
+  using Fft = ${ENTRY}<decltype(${DESC})>;
+  constexpr unsigned N = Fft::size;
+  typename Fft::value_type data[N] = {};
+  data[0] = typename Fft::value_type(1, 0);
+  Fft().execute(data);
+  double sum_re = 0;
+  for (unsigned k = 0; k < N; ++k) sum_re += data[k].real();
+  std::printf("sum_re=%.3f\n", sum_re);
+  return 0;
+}

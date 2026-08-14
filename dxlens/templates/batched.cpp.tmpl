@@ -1,0 +1,29 @@
+#include <cstdio>
+#include <cmath>
+#include <vector>
+#include <${HEADER}>
+using namespace ${NS};
+
+int main() {
+  using Fft = ${ENTRY}<decltype(${DESC})>;
+  using real_t = typename Fft::real_type;
+  constexpr unsigned N = Fft::size, B = ${BATCH};
+  std::vector<typename Fft::value_type> data(static_cast<std::size_t>(N) * B);
+  for (unsigned b = 0; b < B; ++b)
+    for (unsigned n = 0; n < N; ++n)
+      data[static_cast<std::size_t>(b) * N + n] = typename Fft::value_type(
+          static_cast<real_t>(std::cos(2.0 * 3.14159265358979323846 * (b + 1) * n / N)), 0);
+  Fft().execute_batch(data.data(), B);
+  std::printf("peaks=");
+  for (unsigned b = 0; b < B; ++b) {
+    unsigned peak = 0;
+    double best = std::abs(data[static_cast<std::size_t>(b) * N]);
+    for (unsigned k = 1; k < N; ++k) {
+      const double mag = std::abs(data[static_cast<std::size_t>(b) * N + k]);
+      if (mag > best + 1e-3) { best = mag; peak = k; }
+    }
+    std::printf("%s%u", b ? "," : "", peak);
+  }
+  std::printf("\n");
+  return 0;
+}

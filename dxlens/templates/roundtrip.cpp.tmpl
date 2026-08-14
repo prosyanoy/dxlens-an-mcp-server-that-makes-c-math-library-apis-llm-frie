@@ -1,0 +1,24 @@
+#include <cstdio>
+#include <cmath>
+#include <${HEADER}>
+using namespace ${NS};
+
+int main() {
+  using Fwd = ${ENTRY}<decltype(${DESC_FWD})>;
+  using Inv = ${ENTRY}<decltype(${DESC_INV})>;
+  using real_t = typename Fwd::real_type;
+  constexpr unsigned N = Fwd::size;
+  typename Fwd::value_type data[N], ref[N];
+  for (unsigned n = 0; n < N; ++n)
+    ref[n] = data[n] = typename Fwd::value_type(static_cast<real_t>(static_cast<int>(n % 7) - 3), 0);
+  Fwd().execute(data);
+  Inv().execute(data);
+  double err = 0, sum = 0;
+  for (unsigned n = 0; n < N; ++n) {
+    data[n] /= static_cast<real_t>(N);  // the library does not normalize
+    err = std::fmax(err, std::abs(data[n] - ref[n]));
+    sum += data[n].real();
+  }
+  std::printf("sum=%.3f max_error_ok=%d\n", sum, err < ${TOLERANCE});
+  return 0;
+}

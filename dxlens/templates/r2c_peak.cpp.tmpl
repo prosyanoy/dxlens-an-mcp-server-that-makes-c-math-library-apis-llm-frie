@@ -1,0 +1,23 @@
+#include <cstdio>
+#include <cmath>
+#include <${HEADER}>
+using namespace ${NS};
+
+int main() {
+  using Fft = ${ENTRY}<decltype(${DESC})>;
+  using real_t = typename Fft::real_type;
+  constexpr unsigned N = Fft::size;
+  real_t in[Fft::input_length];
+  typename Fft::value_type out[Fft::output_length];
+  for (unsigned n = 0; n < N; ++n)
+    in[n] = static_cast<real_t>(std::sin(2.0 * 3.14159265358979323846 * ${FREQUENCY} * n / N));
+  Fft().execute(in, out);
+  unsigned peak = 0;
+  double best = std::abs(out[0]);
+  for (unsigned k = 1; k < Fft::output_length; ++k) {
+    const double mag = std::abs(out[k]);
+    if (mag > best + 1e-3) { best = mag; peak = k; }
+  }
+  std::printf("bins=%u peak_bin=%u peak_mag=%.3f\n", Fft::output_length, peak, best);
+  return 0;
+}

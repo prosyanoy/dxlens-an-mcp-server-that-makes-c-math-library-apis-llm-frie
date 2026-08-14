@@ -1,0 +1,644 @@
+{
+ "dxlens_spec_version": 1,
+ "library": {
+  "name": "MiniFFTDx",
+  "summary": "Compile-time described FFTs. Build a description by adding operators with operator+, wrap it in FFT<>, then call FFT<>::execute on host memory. Everything lives in namespace minifftdx; include <minifftdx.hpp>.",
+  "header": "minifftdx.hpp",
+  "namespace": "minifftdx",
+  "include": "#include <minifftdx.hpp>",
+  "sha256": "c229dcf45a26495dd788bd7191c29d3ed79fbdc5d00bd6d46d684e1ecf5e956c"
+ },
+ "enums": [
+  {
+   "name": "fft_type",
+   "values": [
+    "c2c",
+    "r2c",
+    "c2r"
+   ],
+   "doc": "Kind of transform: complex-to-complex, real-to-complex, complex-to-real."
+  },
+  {
+   "name": "fft_direction",
+   "values": [
+    "forward",
+    "inverse"
+   ],
+   "doc": "Transform direction. Inverse transforms are NOT normalized (no 1/N scaling)."
+  }
+ ],
+ "operators": [
+  {
+   "name": "Size",
+   "category": "problem",
+   "signature": "template<unsigned int N> struct Size",
+   "template_params": [
+    {
+     "name": "N",
+     "kind": "non_type",
+     "variadic": false,
+     "type": "unsigned int"
+    }
+   ],
+   "doc": "Transform length: the number of points of one FFT.",
+   "required": true,
+   "default": null,
+   "range": [
+    2,
+    4096
+   ],
+   "power_of_two": true,
+   "members": [
+    {
+     "kind": "static_member",
+     "name": "value",
+     "type": "const unsigned int",
+     "doc": ""
+    }
+   ],
+   "examples": [
+    "Size<256>()"
+   ],
+   "constraints": [
+    {
+     "id": "C2",
+     "message": "Size<N> operator is required"
+    },
+    {
+     "id": "C4",
+     "message": "Size must be a power of two in the range [2, 4096]"
+    },
+    {
+     "id": "C8",
+     "message": "ElementsPerThread must evenly divide Size"
+    },
+    {
+     "id": "C12",
+     "message": "FFTsPerBlock * Size * sizeof(complex) must not exceed 48 KiB of shared memory"
+    }
+   ]
+  },
+  {
+   "name": "Precision",
+   "category": "problem",
+   "signature": "template<class T> struct Precision",
+   "template_params": [
+    {
+     "name": "T",
+     "kind": "type",
+     "variadic": false,
+     "type": "typename"
+    }
+   ],
+   "doc": "Floating point type of the real and imaginary parts.",
+   "required": false,
+   "default": "float",
+   "range": null,
+   "power_of_two": false,
+   "members": [],
+   "examples": [
+    "Precision<double>()"
+   ],
+   "constraints": [
+    {
+     "id": "C5",
+     "message": "Precision must be float or double"
+    }
+   ]
+  },
+  {
+   "name": "Type",
+   "category": "problem",
+   "signature": "template<fft_type T> struct Type",
+   "template_params": [
+    {
+     "name": "T",
+     "kind": "non_type",
+     "variadic": false,
+     "type": "fft_type",
+     "enum": "fft_type",
+     "values": [
+      "c2c",
+      "r2c",
+      "c2r"
+     ]
+    }
+   ],
+   "doc": "Kind of transform (see fft_type).",
+   "required": true,
+   "default": null,
+   "range": null,
+   "power_of_two": false,
+   "members": [
+    {
+     "kind": "static_member",
+     "name": "value",
+     "type": "const fft_type",
+     "doc": ""
+    }
+   ],
+   "examples": [
+    "Type<fft_type::c2c>()"
+   ],
+   "constraints": [
+    {
+     "id": "C3",
+     "message": "Type<fft_type> operator is required"
+    },
+    {
+     "id": "C7",
+     "message": "Direction conflicts with Type: r2c is forward-only and c2r is inverse-only"
+    }
+   ]
+  },
+  {
+   "name": "Direction",
+   "category": "problem",
+   "signature": "template<fft_direction D> struct Direction",
+   "template_params": [
+    {
+     "name": "D",
+     "kind": "non_type",
+     "variadic": false,
+     "type": "fft_direction",
+     "enum": "fft_direction",
+     "values": [
+      "forward",
+      "inverse"
+     ]
+    }
+   ],
+   "doc": "Direction of the transform (see fft_direction). Required for c2c; implied by the type for r2c (forward) and c2r (inverse), where it may be omitted.",
+   "required": false,
+   "default": null,
+   "range": null,
+   "power_of_two": false,
+   "members": [
+    {
+     "kind": "static_member",
+     "name": "value",
+     "type": "const fft_direction",
+     "doc": ""
+    }
+   ],
+   "examples": [
+    "Direction<fft_direction::forward>()"
+   ],
+   "constraints": [
+    {
+     "id": "C6",
+     "message": "Direction<> is required for c2c transforms"
+    },
+    {
+     "id": "C7",
+     "message": "Direction conflicts with Type: r2c is forward-only and c2r is inverse-only"
+    }
+   ]
+  },
+  {
+   "name": "ElementsPerThread",
+   "category": "execution",
+   "signature": "template<unsigned int EPT> struct ElementsPerThread",
+   "template_params": [
+    {
+     "name": "EPT",
+     "kind": "non_type",
+     "variadic": false,
+     "type": "unsigned int"
+    }
+   ],
+   "doc": "Number of elements each (virtual) thread holds. Must divide Size.",
+   "required": false,
+   "default": "min(Size, 8)",
+   "range": [
+    1,
+    4096
+   ],
+   "power_of_two": true,
+   "members": [
+    {
+     "kind": "static_member",
+     "name": "value",
+     "type": "const unsigned int",
+     "doc": ""
+    }
+   ],
+   "examples": [
+    "ElementsPerThread<4>()"
+   ],
+   "constraints": [
+    {
+     "id": "C8",
+     "message": "ElementsPerThread must evenly divide Size"
+    }
+   ]
+  },
+  {
+   "name": "FFTsPerBlock",
+   "category": "execution",
+   "signature": "template<unsigned int FPB> struct FFTsPerBlock",
+   "template_params": [
+    {
+     "name": "FPB",
+     "kind": "non_type",
+     "variadic": false,
+     "type": "unsigned int"
+    }
+   ],
+   "doc": "Number of independent FFTs processed together by one execute_batch group.",
+   "required": false,
+   "default": "1",
+   "range": [
+    1,
+    64
+   ],
+   "power_of_two": false,
+   "members": [
+    {
+     "kind": "static_member",
+     "name": "value",
+     "type": "const unsigned int",
+     "doc": ""
+    }
+   ],
+   "examples": [
+    "FFTsPerBlock<2>()"
+   ],
+   "constraints": [
+    {
+     "id": "C9",
+     "message": "FFTsPerBlock must be in the range [1, 64]"
+    },
+    {
+     "id": "C12",
+     "message": "FFTsPerBlock * Size * sizeof(complex) must not exceed 48 KiB of shared memory"
+    }
+   ]
+  },
+  {
+   "name": "SM",
+   "category": "execution",
+   "signature": "template<unsigned int CC> struct SM",
+   "template_params": [
+    {
+     "name": "CC",
+     "kind": "non_type",
+     "variadic": false,
+     "type": "unsigned int"
+    }
+   ],
+   "doc": "Target GPU architecture (compute capability times 100). Only validated, since MiniFFTDx executes on the host.",
+   "required": false,
+   "default": "800",
+   "range": null,
+   "power_of_two": false,
+   "members": [
+    {
+     "kind": "static_member",
+     "name": "value",
+     "type": "const unsigned int",
+     "doc": ""
+    }
+   ],
+   "examples": [
+    "SM<800>()"
+   ],
+   "constraints": [
+    {
+     "id": "C10",
+     "message": "SM must be one of 700, 750, 800, 860, 890, 900"
+    },
+    {
+     "id": "C11",
+     "message": "double precision requires SM >= 800"
+    }
+   ]
+  },
+  {
+   "name": "Block",
+   "category": "execution",
+   "signature": "struct Block",
+   "template_params": [],
+   "doc": "Marker operator selecting block-level (cooperative) execution. Optional.",
+   "required": false,
+   "default": null,
+   "range": null,
+   "power_of_two": false,
+   "members": [],
+   "examples": [
+    "Block()"
+   ],
+   "constraints": []
+  }
+ ],
+ "combinators": [
+  {
+   "name": "operator+",
+   "signature": "template<class A, class B, class > auto operator+(const A &, const B &)",
+   "template_params": [
+    {
+     "name": "A",
+     "kind": "type",
+     "variadic": false,
+     "type": "typename"
+    },
+    {
+     "name": "B",
+     "kind": "type",
+     "variadic": false,
+     "type": "typename"
+    },
+    {
+     "name": "",
+     "kind": "type",
+     "variadic": false,
+     "type": "typename",
+     "default": "std :: enable_if_t < ( detail :: is_operator_v < A > || detail :: is_description_v < A > ) && ( detail :: is_operator_v < B > || detail :: is_description_v < B > ) >>"
+    }
+   ],
+   "doc": "Combine two operators and/or descriptions into one Description. This is the only way to build a description: Size<64>() + Type<fft_type::c2c>() + ...",
+   "examples": []
+  }
+ ],
+ "entries": [
+  {
+   "name": "FFT",
+   "signature": "template<class Desc> struct FFT",
+   "template_params": [
+    {
+     "name": "Desc",
+     "kind": "type",
+     "variadic": false,
+     "type": "typename"
+    }
+   ],
+   "doc": "A host-executable FFT described by Desc (a Description built with operator+). Constraints are enforced with static_assert when FFT<Desc> is instantiated. Execution is in place for c2c, out of place for r2c and c2r. Inverse transforms are not normalized. r2c produces size/2+1 complex outputs; c2r consumes size/2+1 complex inputs and writes size real outputs.",
+   "examples": [
+    "using Desc = decltype(Size<8>() + Type<fft_type::c2c>() + Direction<fft_direction::forward>());\nstd::complex<float> data[8] = {};\nFFT<Desc>().execute(data);",
+    "using Desc = decltype(Size<16>() + Precision<double>() + Type<fft_type::r2c>());\ndouble in[16] = {}; std::complex<double> out[9];\nFFT<Desc>().execute(in, out);"
+   ],
+   "members": [
+    {
+     "kind": "static_member",
+     "name": "size",
+     "type": "const unsigned int",
+     "doc": "Number of points of one FFT."
+    },
+    {
+     "kind": "static_member",
+     "name": "type",
+     "type": "const fft_type",
+     "doc": ""
+    },
+    {
+     "kind": "static_member",
+     "name": "direction",
+     "type": "const fft_direction",
+     "doc": ""
+    },
+    {
+     "kind": "static_member",
+     "name": "elements_per_thread",
+     "type": "const unsigned int",
+     "doc": "Elements held per thread (default min(Size, 8))."
+    },
+    {
+     "kind": "static_member",
+     "name": "ffts_per_block",
+     "type": "const unsigned int",
+     "doc": "Number of FFTs per execute_batch group (default 1)."
+    },
+    {
+     "kind": "static_member",
+     "name": "sm",
+     "type": "const unsigned int",
+     "doc": "Target architecture (default 800)."
+    },
+    {
+     "kind": "static_member",
+     "name": "threads_per_fft",
+     "type": "const unsigned int",
+     "doc": "Threads needed for one FFT: Size / ElementsPerThread."
+    },
+    {
+     "kind": "static_member",
+     "name": "storage_size",
+     "type": "const unsigned int",
+     "doc": "Per-thread register storage in elements (== elements_per_thread)."
+    },
+    {
+     "kind": "static_member",
+     "name": "shared_memory_size",
+     "type": "const unsigned int",
+     "doc": "Shared memory bytes needed by one group: FFTsPerBlock * Size * sizeof(complex)."
+    },
+    {
+     "kind": "static_member",
+     "name": "input_length",
+     "type": "const unsigned int",
+     "doc": "Number of input elements per FFT (c2c: size, r2c: size reals, c2r: size/2+1)."
+    },
+    {
+     "kind": "static_member",
+     "name": "output_length",
+     "type": "const unsigned int",
+     "doc": "Number of output elements per FFT (c2c: size, r2c: size/2+1, c2r: size reals)."
+    },
+    {
+     "kind": "method",
+     "name": "execute",
+     "signature": "void execute(value_type * data) const",
+     "doc": "In-place c2c transform of `size` elements. Only valid for Type<fft_type::c2c>."
+    },
+    {
+     "kind": "method",
+     "name": "execute",
+     "signature": "void execute(const real_type * in, value_type * out) const",
+     "doc": "r2c: `size` real inputs -> size/2+1 complex outputs. Only valid for Type<fft_type::r2c>."
+    },
+    {
+     "kind": "method",
+     "name": "execute",
+     "signature": "void execute(const value_type * in, real_type * out) const",
+     "doc": "c2r: size/2+1 complex inputs (Hermitian half spectrum) -> `size` real outputs, unnormalized. Only valid for Type<fft_type::c2r>."
+    },
+    {
+     "kind": "method",
+     "name": "execute_batch",
+     "signature": "void execute_batch(value_type * data, unsigned int batch) const",
+     "doc": "c2c transform of `batch` contiguous FFTs (batch * size elements), in place."
+    }
+   ],
+   "constraints": [
+    {
+     "condition": "detail::is_description_v<Desc>",
+     "message": "FFT requires a Description built by adding operators with operator+",
+     "id": "C1",
+     "operators": []
+    },
+    {
+     "condition": "traits::has_size",
+     "message": "Size<N> operator is required",
+     "id": "C2",
+     "operators": [
+      "Size"
+     ]
+    },
+    {
+     "condition": "traits::has_type",
+     "message": "Type<fft_type> operator is required",
+     "id": "C3",
+     "operators": [
+      "Type"
+     ]
+    },
+    {
+     "condition": "!traits::has_size || traits::size_ok",
+     "message": "Size must be a power of two in the range [2, 4096]",
+     "id": "C4",
+     "operators": [
+      "Size"
+     ]
+    },
+    {
+     "condition": "traits::precision_ok",
+     "message": "Precision must be float or double",
+     "id": "C5",
+     "operators": [
+      "Precision"
+     ]
+    },
+    {
+     "condition": "!traits::has_type || traits::direction_ok",
+     "message": "Direction<> is required for c2c transforms",
+     "id": "C6",
+     "operators": [
+      "Direction"
+     ]
+    },
+    {
+     "condition": "traits::direction_consistent",
+     "message": "Direction conflicts with Type: r2c is forward-only and c2r is inverse-only",
+     "id": "C7",
+     "operators": [
+      "Type",
+      "Direction"
+     ]
+    },
+    {
+     "condition": "traits::ept_ok",
+     "message": "ElementsPerThread must evenly divide Size",
+     "id": "C8",
+     "operators": [
+      "Size",
+      "ElementsPerThread"
+     ]
+    },
+    {
+     "condition": "traits::fpb_ok",
+     "message": "FFTsPerBlock must be in the range [1, 64]",
+     "id": "C9",
+     "operators": [
+      "FFTsPerBlock"
+     ]
+    },
+    {
+     "condition": "traits::sm_ok",
+     "message": "SM must be one of 700, 750, 800, 860, 890, 900",
+     "id": "C10",
+     "operators": [
+      "SM"
+     ]
+    },
+    {
+     "condition": "traits::double_ok",
+     "message": "double precision requires SM >= 800",
+     "id": "C11",
+     "operators": [
+      "SM"
+     ]
+    },
+    {
+     "condition": "traits::shared_ok",
+     "message": "FFTsPerBlock * Size * sizeof(complex) must not exceed 48 KiB of shared memory",
+     "id": "C12",
+     "operators": [
+      "Size",
+      "FFTsPerBlock"
+     ]
+    },
+    {
+     "condition": "traits::type == fft_type::c2c",
+     "message": "execute(data) is only available for c2c transforms; use execute(in, out) for r2c/c2r",
+     "method": "execute",
+     "id": "C13",
+     "operators": []
+    },
+    {
+     "condition": "traits::type == fft_type::r2c",
+     "message": "execute(const real*, complex*) is only available for r2c transforms",
+     "method": "execute",
+     "id": "C14",
+     "operators": []
+    },
+    {
+     "condition": "traits::type == fft_type::c2r",
+     "message": "execute(const complex*, real*) is only available for c2r transforms",
+     "method": "execute",
+     "id": "C15",
+     "operators": []
+    },
+    {
+     "condition": "traits::type == fft_type::c2c",
+     "message": "execute_batch is only available for c2c transforms",
+     "method": "execute_batch",
+     "id": "C16",
+     "operators": []
+    }
+   ]
+  }
+ ],
+ "traits": [
+  {
+   "name": "is_supported",
+   "signature": "template<class Desc, class > struct is_supported",
+   "template_params": [
+    {
+     "name": "Desc",
+     "kind": "type",
+     "variadic": false,
+     "type": "typename"
+    },
+    {
+     "name": "",
+     "kind": "type",
+     "variadic": false,
+     "type": "typename",
+     "default": "void"
+    }
+   ],
+   "doc": "Non-asserting check: true when Desc is a complete, valid FFT description. Use it to test a configuration without triggering a compile error.",
+   "examples": [
+    "static_assert(is_supported<decltype(Size<64>() + Type<fft_type::c2c>() + Direction<fft_direction::forward>())>::value);"
+   ]
+  }
+ ],
+ "functions": [
+  {
+   "name": "reference_dft",
+   "signature": "template<class P> void reference_dft(const std::complex<P> * in, std::complex<P> * out, unsigned int n, fft_direction dir)",
+   "template_params": [
+    {
+     "name": "P",
+     "kind": "type",
+     "variadic": false,
+     "type": "typename"
+    }
+   ],
+   "doc": "Naive O(N^2) reference DFT, useful to check results. Direction as in fft_direction; inverse is unnormalized.",
+   "examples": [
+    "reference_dft(in, out, 8, fft_direction::forward);"
+   ]
+  }
+ ]
+}

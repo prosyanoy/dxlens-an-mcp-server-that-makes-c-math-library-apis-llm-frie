@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "dxlens": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["-m", "dxlens.server"],
+      "cwd": "${workspaceFolder}"
+    }
+  }
+}

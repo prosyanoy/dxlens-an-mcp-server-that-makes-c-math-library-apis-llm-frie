@@ -1,0 +1,112 @@
+# MiniFFTDx
+> Compile-time described FFTs. Build a description by adding operators with operator+, wrap it in FFT<>, then call FFT<>::execute on host memory. Everything lives in namespace minifftdx; include <minifftdx.hpp>.
+
+Include: `#include <minifftdx.hpp>`
+Namespace: `minifftdx`
+
+## Workflow
+1. Describe the problem by adding operators with `operator+`: `A() + B() + ...` (the only way to build a description).
+2. Name its type: `using Desc = decltype(A() + B() + ...);`
+3. Instantiate `FFT<Desc>` (constraints are checked at compile time) and call its members.
+
+## Enums
+- `fft_type`: c2c | r2c | c2r. Kind of transform: complex-to-complex, real-to-complex, complex-to-real.
+- `fft_direction`: forward | inverse. Transform direction. Inverse transforms are NOT normalized (no 1/N scaling).
+
+## Operators
+### `Size<N>()` [problem, required]
+Transform length: the number of points of one FFT.
+- Domain: N: unsigned int in [2, 4096], power of two
+- Example: `Size<256>()`
+
+### `Precision<T>()` [problem, default float]
+Floating point type of the real and imaginary parts.
+- Domain: T: C++ type
+- Example: `Precision<double>()`
+
+### `Type<fft_type::c2c|r2c|c2r>()` [problem, required]
+Kind of transform (see fft_type).
+- Domain: T: fft_type in {c2c, r2c, c2r}
+- Example: `Type<fft_type::c2c>()`
+
+### `Direction<fft_direction::forward|inverse>()` [problem]
+Direction of the transform (see fft_direction). Required for c2c; implied by the type for r2c (forward) and c2r (inverse), where it may be omitted.
+- Domain: D: fft_direction in {forward, inverse}
+- Example: `Direction<fft_direction::forward>()`
+
+### `ElementsPerThread<EPT>()` [execution, default min(Size, 8)]
+Number of elements each (virtual) thread holds. Must divide Size.
+- Domain: EPT: unsigned int in [1, 4096], power of two
+- Example: `ElementsPerThread<4>()`
+
+### `FFTsPerBlock<FPB>()` [execution, default 1]
+Number of independent FFTs processed together by one execute_batch group.
+- Domain: FPB: unsigned int in [1, 64]
+- Example: `FFTsPerBlock<2>()`
+
+### `SM<CC>()` [execution, default 800]
+Target GPU architecture (compute capability times 100). Only validated, since MiniFFTDx executes on the host.
+- Domain: CC: unsigned int
+- Example: `SM<800>()`
+
+### `Block()` [execution]
+Marker operator selecting block-level (cooperative) execution. Optional.
+- Example: `Block()`
+
+## FFT<Desc>
+A host-executable FFT described by Desc (a Description built with operator+). Constraints are enforced with static_assert when FFT<Desc> is instantiated. Execution is in place for c2c, out of place for r2c and c2r. Inverse transforms are not normalized. r2c produces size/2+1 complex outputs; c2r consumes size/2+1 complex inputs and writes size real outputs.
+
+Constraints (compile-time static_assert; message text is what the compiler prints):
+- C1: FFT requires a Description built by adding operators with operator+
+- C2: Size<N> operator is required
+- C3: Type<fft_type> operator is required
+- C4: Size must be a power of two in the range [2, 4096]
+- C5: Precision must be float or double
+- C6: Direction<> is required for c2c transforms
+- C7: Direction conflicts with Type: r2c is forward-only and c2r is inverse-only
+- C8: ElementsPerThread must evenly divide Size
+- C9: FFTsPerBlock must be in the range [1, 64]
+- C10: SM must be one of 700, 750, 800, 860, 890, 900
+- C11: double precision requires SM >= 800
+- C12: FFTsPerBlock * Size * sizeof(complex) must not exceed 48 KiB of shared memory
+- C13: execute(data) is only available for c2c transforms; use execute(in, out) for r2c/c2r
+- C14: execute(const real*, complex*) is only available for r2c transforms
+- C15: execute(const complex*, real*) is only available for c2r transforms
+- C16: execute_batch is only available for c2c transforms
+
+Static members:
+- `size` (unsigned int): Number of points of one FFT.
+- `type` (fft_type): 
+- `direction` (fft_direction): 
+- `elements_per_thread` (unsigned int): Elements held per thread (default min(Size, 8)).
+- `ffts_per_block` (unsigned int): Number of FFTs per execute_batch group (default 1).
+- `sm` (unsigned int): Target architecture (default 800).
+- `threads_per_fft` (unsigned int): Threads needed for one FFT: Size / ElementsPerThread.
+- `storage_size` (unsigned int): Per-thread register storage in elements (== elements_per_thread).
+- `shared_memory_size` (unsigned int): Shared memory bytes needed by one group: FFTsPerBlock * Size * sizeof(complex).
+- `input_length` (unsigned int): Number of input elements per FFT (c2c: size, r2c: size reals, c2r: size/2+1).
+- `output_length` (unsigned int): Number of output elements per FFT (c2c: size, r2c: size/2+1, c2r: size reals).
+
+Methods:
+- `void execute(value_type * data) const`: In-place c2c transform of `size` elements. Only valid for Type<fft_type::c2c>.
+- `void execute(const real_type * in, value_type * out) const`: r2c: `size` real inputs -> size/2+1 complex outputs. Only valid for Type<fft_type::r2c>.
+- `void execute(const value_type * in, real_type * out) const`: c2r: size/2+1 complex inputs (Hermitian half spectrum) -> `size` real outputs, unnormalized. Only valid for Type<fft_type::c2r>.
+- `void execute_batch(value_type * data, unsigned int batch) const`: c2c transform of `batch` contiguous FFTs (batch * size elements), in place.
+
+Examples:
+```cpp
+using Desc = decltype(Size<8>() + Type<fft_type::c2c>() + Direction<fft_direction::forward>());
+std::complex<float> data[8] = {};
+FFT<Desc>().execute(data);
+```
+```cpp
+using Desc = decltype(Size<16>() + Precision<double>() + Type<fft_type::r2c>());
+double in[16] = {}; std::complex<double> out[9];
+FFT<Desc>().execute(in, out);
+```
+
+## Helpers
+- `is_supported<Desc>::value`: Non-asserting check: true when Desc is a complete, valid FFT description. Use it to test a configuration without triggering a compile error.
+  - Example: `static_assert(is_supported<decltype(Size<64>() + Type<fft_type::c2c>() + Direction<fft_direction::forward>())>::value);`
+- `template<class P> void reference_dft(const std::complex<P> * in, std::complex<P> * out, unsigned int n, fft_direction dir)`: Naive O(N^2) reference DFT, useful to check results. Direction as in fft_direction; inverse is unnormalized.
+  - Example: `reference_dft(in, out, 8, fft_direction::forward);`

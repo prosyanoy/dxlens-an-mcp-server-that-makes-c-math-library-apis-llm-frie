@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DxLens API spec",
+  "type": "object",
+  "required": ["dxlens_spec_version", "library", "enums", "operators", "combinators", "entries", "traits", "functions"],
+  "properties": {
+    "dxlens_spec_version": {"const": 1},
+    "library": {
+      "type": "object",
+      "required": ["name", "summary", "header", "namespace", "include", "sha256"],
+      "properties": {"name": {"type": "string"}, "summary": {"type": "string"}, "header": {"type": "string"},
+                      "namespace": {"type": "string"}, "include": {"type": "string"}, "sha256": {"type": "string", "minLength": 64}}
+    },
+    "enums": {"type": "array", "items": {"type": "object", "required": ["name", "values", "doc"],
+              "properties": {"name": {"type": "string"}, "values": {"type": "array", "items": {"type": "string"}, "minItems": 1}}}},
+    "operators": {"type": "array", "items": {"type": "object",
+      "required": ["name", "category", "signature", "template_params", "doc", "required", "default", "range", "power_of_two", "examples", "constraints"],
+      "properties": {
+        "name": {"type": "string"}, "category": {"type": "string"}, "required": {"type": "boolean"},
+        "range": {"type": ["array", "null"], "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
+        "template_params": {"type": "array", "items": {"type": "object", "required": ["name", "kind", "variadic"],
+                            "properties": {"kind": {"enum": ["type", "non_type", "template"]}}}},
+        "examples": {"type": "array", "items": {"type": "string"}}}}},
+    "combinators": {"type": "array", "items": {"type": "object", "required": ["name", "signature", "doc"]}},
+    "entries": {"type": "array", "items": {"type": "object", "required": ["name", "members", "constraints", "examples"],
+      "properties": {"constraints": {"type": "array", "items": {"type": "object", "required": ["id", "condition", "message", "operators"]}},
+                      "members": {"type": "array", "items": {"type": "object", "required": ["kind", "name", "doc"],
+                                  "properties": {"kind": {"enum": ["method", "static_member"]}}}}}}},
+    "traits": {"type": "array", "items": {"type": "object", "required": ["name", "doc"]}},
+    "functions": {"type": "array", "items": {"type": "object", "required": ["name", "signature", "doc"]}}
+  }
+}

@@ -1,0 +1,22 @@
+#include <cstdio>
+#include <cmath>
+#include <${HEADER}>
+using namespace ${NS};
+
+int main() {
+  using Fft = ${ENTRY}<decltype(${DESC})>;
+  using real_t = typename Fft::real_type;
+  constexpr unsigned N = Fft::size;
+  typename Fft::value_type data[N];
+  for (unsigned n = 0; n < N; ++n)
+    data[n] = typename Fft::value_type(static_cast<real_t>(std::cos(2.0 * 3.14159265358979323846 * ${FREQUENCY} * n / N)), 0);
+  Fft().execute(data);
+  unsigned peak = 0;
+  double best = std::abs(data[0]);
+  for (unsigned k = 1; k < N; ++k) {
+    const double mag = std::abs(data[k]);
+    if (mag > best + 1e-3) { best = mag; peak = k; }
+  }
+  std::printf("peak_bin=%u peak_mag=%.3f\n", peak, best);
+  return 0;
+}

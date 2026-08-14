@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "dxlens": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["-m", "dxlens.server"],
+      "env": {"DXLENS_HEADER": "headers/minifftdx.hpp"}
+    }
+  }
+}
